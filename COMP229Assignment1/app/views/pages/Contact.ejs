@@ -1,0 +1,70 @@
+<!--Contact.ejs Kwun Hing Lau 301230390  10/4/2022-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title><%=title%></title>
+    <h1 class="pageheading"><span><%=title%></span></h1>
+    <%- include('../partials/header'); %>
+    
+</head>
+<body>
+    <%- include('../partials/content'); %>
+<div class="contact">
+    <h3><span>Contact Us</span></h3>
+    <table>
+        <tr>
+            <td>
+                <img src="img/phone_logo_transparent.png" alt="csharp" width="250px">
+            </td>
+            <td>
+                <img src="img/email_logo_transparent.png" alt="java" width="200px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><span>Phone</span></p>
+            </td>
+            <td>
+                <p><span>Email</span></p>
+            </td>
+        </tr>
+    </tr>
+    <tr>
+        <td>
+            <p><span>+1(905)123-8888</span></p>
+        </td>
+        <td>
+            <a href="mailto:contactus@centennialcollege.ca"><span> contactus@centennialcollege.ca</span></a>
+        </td>   
+    </tr>
+    </table>
+</div>
+<br>
+<div class="message">
+    <h3><span>Message Us</span></h3>
+    <form id="massageform">
+            <input type="text" name="FirstName" id="FirstName" placeholder="First Name" size="25" required="required">
+            <input type="text" name="LastName" id="LastName" placeholder="Last Name" size="25"required="required">
+            <br><br>
+            <input type="email" name="Email" id="Email" placeholder="Email Address"  size="25" required="required">
+         
+            <input type="tel" name="Phone" id="Phone"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone (XXX-XXX-XXXX)" size="25"required="required">
+            <br><br>
+            <textarea id="clientMessage" cols="56" name="clientMessage" rows="7" placeholder="Please enter your message"  ></textarea>
+            <br> <br>
+            <input type="submit"  onclick="resultMessage()"value="Send Form">
+			<input type="reset"  value="Clear Form">
+        </form>
+   
+</div>
+
+</body>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+<script src="js/Contact.js"></script>
+</html>

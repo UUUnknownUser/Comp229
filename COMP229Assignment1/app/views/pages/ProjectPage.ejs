@@ -1,0 +1,35 @@
+<!--ProjectPage.ejs Kwun Hing Lau 301230390  10/4/2022-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%=title%></title>
+    <h1 class="pageheading"><span><%=title%></span></h1>
+    <%- include('../partials/header'); %>
+    
+   
+</head>
+<body>
+    <%- include('../partials/content'); %>
+    <div class="project">
+    <a href="http://studentweb.cencol.ca/klau124/Project/Home%20Page.html"><span>Project 1: Property Agent Website</span></a><br><br>
+    <p><span>Learned how to use CSS and HTML to create a website</span></p>
+    <img src="img/propertyagent.PNG" alt="project1" width="500px"><br><br>
+    <hr>
+    <a href="http://studentweb.cencol.ca/klau124/COMP125/Assignment4/301230390_Assignment4.html"><span>Project 2: Member Registration Form</span></a><br><br>
+    <p><span>Learned how to use JavaScript to create a form</span></p>
+    <img src="img/memberform.PNG" alt="project2"width="500px"><br><br>
+    <hr>
+    <a href="http://studentweb.cencol.ca/klau124/COMP125/Assignment6/301230390_Assignment6.html"><span>Project 3: Photo Gallary</span></a><br><br>
+    <p><span>Learned how to use JavaScript to create a photo gallary</span></p>
+    <img src="img/photogallary.PNG" alt="project3"width="500px"><br><br>
+  
+    </div>
+</body>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</html>

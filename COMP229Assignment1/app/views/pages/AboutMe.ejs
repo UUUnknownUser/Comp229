@@ -1,0 +1,51 @@
+<!--AboutMe.ejs Kwun Hing Lau 301230390  10/4/2022-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%=title%></title>
+    <h1 class="pageheading"><span><%=title%></span></h1>
+    <%- include('../partials/header'); %>
+    
+   
+   
+</head>
+<body>
+    <%- include('../partials/content'); %>
+<div class="profile">
+    <div class="container">
+        <div class="profilepic">
+            <img src="img/profile.jpg" width="200 px" align="left"></img>
+        </div>
+
+        <div class="profiletext">
+        <p>My Name is Kwun Hing (Henry) Lau<br>I came from Hong Kong.I am an internetional student at Centennial College and studying
+           Software Engineering.<br>
+        </p>
+        <p>My hobbies</p>
+        <ul>
+            <li>Workout</li>
+            <li>Watching Movie</li>
+            <li>Reading Manga</li>
+            <li>Reading books</li>
+            <li>Playing Video games</li>
+            
+        </ul>
+        
+        </div>
+
+
+    </div>
+    <div class="resume" >
+        <a href="https://drive.google.com/file/d/1zj4srzNXy1xbYk7Gq1jMCY_rv5q10x-a/view?usp=sharing" ><span>My Resume</span></a>
+    </div>
+</div>
+</body>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</html>
