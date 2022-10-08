@@ -1,3 +1,4 @@
+// Contact.js Kwun Hing Lau 301230390  10/4/2022
 function resultMessage() {
     var firstName = document.getElementById("FirstName").value;
     var lastName = document.getElementById("LastName").value;

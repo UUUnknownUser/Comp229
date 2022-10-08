@@ -1,4 +1,4 @@
-// express.portfolio.js Kwun Hing Lau 301230390  10/4/2022
+// HomePage.js Kwun Hing Lau 301230390  10/4/2022
 function createEventListeners() {
      
     var knowMoreAboutMe = document.getElementById("homepageaboutme");
