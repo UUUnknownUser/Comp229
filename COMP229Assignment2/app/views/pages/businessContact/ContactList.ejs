@@ -14,7 +14,7 @@
 
    
     <%- include('../../partials/content'); %>
-        <table>
+        <!-- <table>
             <thead>
             <tr>
                 <th scope="col">Name</th>
@@ -31,12 +31,46 @@
                 </tr>
                 <%})%>
                 </tbody>
-            </table> 
-
-
-            
+            </table>  -->
             <a href="/contactlistadd" class="btn btn-primary" role="button">
-            <i class="fas fa-plus-circle"></i> Add a Book</a>
+                <i class="fas fa-plus-circle"></i> Add Nre Contact</a>
+
+            <p>---------------------------------------------------------------------</p>
+            
+            <!-- Repeatable Template Row -->
+            <div class="offset-md-1 col-md-11"></div>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr class="d-flex">
+                   
+                        <th class="text-center col-2">Contact Name</th>
+                        <th class="text-center col-2">Contact Number</th>
+                        <th class="text-center col-1">Email</th>
+                     
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                  
+                </tr>
+            <% for(let count = 0; count < contactList.length; count++) { %>
+                <tr class="d-flex">
+                    
+                        <td class="text-center col-2"><%= contactList[count].contactName %></td>
+                        <td class="text-center col-2"><%= contactList[count].contactNumber %></td>
+                        <td class="text-center col-1"><%= contactList[count].email %></td>          
+                        <td class="text-center col-1">
+                            <a href="/book-list/edit/<%= contactList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/book-list/delete/<%= contactList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+            
+
             
 </body>
 <footer>

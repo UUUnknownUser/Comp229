@@ -13,9 +13,10 @@ let methodOverride  =require('method-override')
 
  let session        =require('express-session')
  let passport       =require('passport')
- let pasportlocal   =require('passport-local').Strategy
+ let passportLocal = require('passport-local');
+ let localStrategy = passportLocal.Strategy;
 
-
+ let flash = require('connect-flash');
 
 module.exports=function(){
     var app=express();
@@ -41,6 +42,8 @@ module.exports=function(){
         secret:config.sessionSecret
     }));
 
+    app.use(flash());
+
     // Initialize passport 
     app.use(passport.initialize())
     app.use(passport.session())
@@ -49,9 +52,11 @@ module.exports=function(){
     let userModel=require('../app/models/users.server.model.js');
     let User=userModel.UserSchema
 
+
+    passport.use(User.createStrategy());
     // // Serialize and Deserialize User info
-    // passport.serializeUser(User.serializeUser())
-    // passport.deserializeUser(User.deserializeUser())
+    passport.serializeUser(User.serializeUser())
+    passport.deserializeUser(User.deserializeUser())
 
 
     app.set('views','./app/views/pages');

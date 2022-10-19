@@ -10,7 +10,12 @@
 </head>
 <body>
     <%- include('../partials/content'); %>
-
+  <!-- Message Area -->
+    <% if(messages.length > 0) {%>
+    <div class="alert alert-danger">
+        <%= messages %>
+    </div>
+    <% } %>
     <main class="logincontainer">
         <div class="row">
           <% if (typeof(alert) != "undefined") { %>

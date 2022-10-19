@@ -1,6 +1,7 @@
 //const User = require('mongoose').model('User')
 const mongoose  = require('../../config/mongoose')
 const User      = require('../models/users.server.model')
+let passport = require('passport');
 
 
 exports.create = function (req, res, next) {
@@ -32,6 +33,7 @@ exports.renderLogin = (req, res, next) => {
     if (!req.user) {
         res.render('login', {
             title: 'Login',
+            messages: req.flash('loginMessage'),
             // alert: 'User Does Not Exist',
             displayName: req.user ? req.user.displayName : ''
         })
@@ -49,6 +51,7 @@ exports.loginUser = async (req, res, next) => {
 
         //check user login error
         if (!user) {
+            req.flash('loginMessage', 'Authentication Error');
             console.log('Authentication Error')
             return res.redirect('/login')
         }
@@ -57,8 +60,15 @@ exports.loginUser = async (req, res, next) => {
             if (err) {
                 return next(Err)
             }
-            res.redirect('/')
+            return res.redirect('/ContactList');
         })
     })(req, res, next)
 }
 
+
+module.exports.performLogout = (req, res, next) => {
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+      });
+    };

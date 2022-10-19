@@ -9,7 +9,7 @@ module.exports = function(app) {
 
     app.get('/contactlist',businessController.rendercontactlist)
     app.get('/contactlistadd',businessController.renderAddContact)
-    app.post('/',businessController.processAddContact);
+    app.post('/add',businessController.processAddContact);
 }
 
 

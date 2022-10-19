@@ -8,7 +8,9 @@ module.exports = function(app) {
     //get Login Page
     app.get('/login', userController.renderLogin)
 
-    app.post('/login', userController.loginUser)
+    app.post('/', userController.loginUser)
+
+    app.get('/logout', userController.performLogout);
 
    
 }

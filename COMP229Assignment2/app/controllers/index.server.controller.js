@@ -10,6 +10,7 @@ exports.renderHome=function(req,res){
     
     res.render('HomePage',{
         title:'Home Page',
+        displayName: req.user ? req.user.displayName : ''
         
     })
 };
@@ -22,6 +23,7 @@ exports.renderAboutMe=function(req,res){
     
     res.render('AboutMe',{
         title:'About Me',
+        displayName: req.user ? req.user.displayName : ''
         
     })
 };
@@ -32,7 +34,8 @@ exports.renderProject=function(req,res){
     req.session.lastVisit=new Date();
     
     res.render('ProjectPage',{
-        title:'Project Page'
+        title:'Project Page',
+        displayName: req.user ? req.user.displayName : ''
     })
 };
 exports.renderService=function(req,res){
@@ -42,7 +45,8 @@ exports.renderService=function(req,res){
     req.session.lastVisit=new Date();
     
     res.render('ServicesPage',{
-        title:'Services Page'
+        title:'Services Page',
+        displayName: req.user ? req.user.displayName : ''
     })
 };
 exports.renderContact=function(req,res){
@@ -52,7 +56,8 @@ if(req.session.lastVisit){
     req.session.lastVisit=new Date();
     
     res.render('Contact',{
-        title:'Contact'
+        title:'Contact',
+        displayName: req.user ? req.user.displayName : ''
     })
 };
 

@@ -40,6 +40,6 @@ const UserSchema = new Schema
 )
 
 // //configure options for User Model
-// let options = ({ missingPasswordError: 'Wrong / Missing Password' })
-// UserSchema.plugin(passportLocalMongoose, options)
-// module.exports.UserSchema =mongoose.model("User", UserSchema)
+let options = ({ missingPasswordError: 'Wrong / Missing Password' })
+UserSchema.plugin(passportLocalMongoose, options)
+module.exports.UserSchema =mongoose.model("User", UserSchema)
