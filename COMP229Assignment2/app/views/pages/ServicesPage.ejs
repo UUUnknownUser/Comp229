@@ -1,0 +1,51 @@
+<!--ServicesPage.ejs Kwun Hing Lau 301230390  10/4/2022-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title><%=title%></title>
+    
+    <h1 class="pageheading"><span><%=title%></span></h1>
+    <%- include('../partials/header'); %>
+    
+   
+</head>
+<body>
+    <%- include('../partials/content'); %>
+    <table class="service">
+        <tr>
+            <td>
+                <img src="img/csharp2.png" alt="csharp" width="200px">
+            </td>
+            <td>
+                <img src="img/java.png" alt="java" width="200px">
+            </td>
+            <td>
+                <img src="img/webdevelop.png" alt="java" width="200px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>C# progamming</p>
+            </td>
+            <td>
+                <p>JAVA progamming</p>
+            </td>
+            <td>
+                <p>HTML,CSS,JavaScript</p>
+            </td>
+        </tr>
+    </table>
+   
+
+
+ 
+</body>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</html>

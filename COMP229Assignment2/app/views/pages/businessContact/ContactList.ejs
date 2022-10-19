@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <h1 class="pageheading"><span><%=title%></span></h1>
+    <%- include('../../partials/header.ejs'); %>
+
+</head>
+<body>
+
+
+   
+    <%- include('../../partials/content'); %>
+        <table>
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%contactList.forEach(contact=>{%>
+                <tr>
+                    <th scope="row"><%=contact.contactName%></th>
+                    <th scope="row"><%=contact.contactNumber%></th>
+                    <th scope="row"><%=contact.email%></th>
+                </tr>
+                <%})%>
+                </tbody>
+            </table> 
+
+
+            
+            <a href="/contactlistadd" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i> Add a Book</a>
+            
+</body>
+<footer>
+    <%- include('../../partials/footer'); %>
+</footer>
+</html>
