@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+
+           
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="contactNameTextField">Contact Name</label>
+                    <input type="text" class="form-control"
+                    id="contactNameTextField"
+                    placeholder="Enter the Contact Name"
+                    name="contactName"
+                    value="<%= contactlist.contactName %>"
+                    required>
+                </div>
+                
+              
+                <div class="form-group">
+                    <label for="contactNumberTextField">Contact Number</label>
+                    <input type="text" class="form-control"
+                     id="contactNumberTextField"
+                    placeholder="Enter the Contact Number"
+                    name="contactNumber"
+                    value="<%= contactlist.contactNumber %>"
+                    required>
+                </div>  
+
+                <div class="form-group">
+                    <label for="emailTextField">Email</label>
+                    <input type="email" class="form-control"
+                    id="emailTextField"
+                    placeholder="Enter the Email"
+                    name="email" 
+                    value="<%= contactlist.email %>"
+                    required>
+                </div>
+                
+
+               
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/book-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>

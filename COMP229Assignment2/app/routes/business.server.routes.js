@@ -10,6 +10,8 @@ module.exports = function(app) {
     app.get('/contactlist',businessController.rendercontactlist)
     app.get('/contactlistadd',businessController.renderAddContact)
     app.post('/add',businessController.processAddContact);
+    app.get('/contactlistedit/:id',businessController.renderEditPage)
+    app.post('/contactlistedit/:id',businessController.processEditPage)
 }
 
 

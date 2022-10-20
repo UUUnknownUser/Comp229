@@ -2,15 +2,16 @@
 const mongoose  = require('../../config/mongoose')
 
 // create a reference to the model
-let Contactlist = require('../models/business.server.model')
+let Contactlist = require('../models/business.server.model');
+const { UserSchema } = require('../models/users.server.model');
 
 //render Contactlist Page
 module.exports.rendercontactlist = (req, res, next) => {
-    if(!req.user){
-        req.flash('loginMessage', 'Must be signed in first to access this page.');
-        return res.redirect("/login");
-    } else
-    {
+    // if(!req.user){
+    //     req.flash('loginMessage', 'Must be signed in first to access this page.');
+    //     return res.redirect("/login");
+    // } else
+    // {
         
    
 
@@ -31,7 +32,7 @@ module.exports.rendercontactlist = (req, res, next) => {
     
 
     }   
-}    
+// }    
 
 //render Contactlist Add Page
 module.exports.renderAddContact = (req, res, next) => {
@@ -67,11 +68,11 @@ module.exports.renderAddContact = (req, res, next) => {
     })
 }     
 
-
-module.exports.displayEditPage = (req, res, next) => {
+ //render Contactlist Edit Page
+module.exports.renderEditPage = (req, res, next) => {
     let id = req.params.id;
 
-    Book.findById(id, (err, bookToEdit) => {
+    Contactlist.findById(id, (err, contantToEdit) => {
         if(err)
         {
             console.log(err);
@@ -80,8 +81,32 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('book/edit', {title: 'Edit Book', book: bookToEdit, 
+            res.render('businessContact/ContactUpdate', {title: 'Edit Contact', contactlist: contantToEdit, 
             displayName: req.user ? req.user.displayName : ''})
         }
     });
-}       
+}   
+ //Process Contactlist Edit Page
+module.exports.processEditPage = (req, res, next) => {
+    let id = req.params.id
+
+    let updatedContact = Contactlist({
+        "_id": id,
+        "contactName":req.body.contactName,
+        "contactNumber":req.body.contactNumber,
+        "email":req.body.email
+    });
+
+    Contactlist.updateOne({_id: id}, updatedContact, (err) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            // refresh the contact list
+            res.redirect('/contactlist');
+        }
+    });
+}
