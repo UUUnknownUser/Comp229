@@ -23,19 +23,19 @@ module.exports = function(app) {
    
     //get Business Contact List Page
 
-    // app.get('/contactlist',requireAuth,businessController.rendercontactlist)
-    // app.get('/contactlistadd',requireAuth,businessController.renderAddContact)
-    // app.post('/add',requireAuth,businessController.processAddContact);
-    // app.get('/contactlistedit/:id',requireAuth,businessController.renderEditPage)
-    // app.post('/contactlistedit/:id',requireAuth,businessController.processEditPage)
-    // app.get('/contactlistdelete/:id',requireAuth,businessController.performDelete)
+    app.get('/contactlist',requireAuth,businessController.rendercontactlist)
+    app.get('/contactlistadd',requireAuth,businessController.renderAddContact)
+    app.post('/add',requireAuth,businessController.processAddContact);
+    app.get('/contactlistedit/:id',requireAuth,businessController.renderEditPage)
+    app.post('/contactlistedit/:id',requireAuth,businessController.processEditPage)
+    app.get('/contactlistdelete/:id',requireAuth,businessController.performDelete)
 
-    app.get('/contactlist',businessController.rendercontactlist)
-    app.get('/contactlistadd',businessController.renderAddContact)
-    app.post('/add',businessController.processAddContact);
-    app.get('/contactlistedit/:id',businessController.renderEditPage)
-    app.post('/contactlistedit/:id',businessController.processEditPage)
-    app.get('/contactlistdelete/:id',businessController.performDelete)
+    // app.get('/contactlist',businessController.rendercontactlist)
+    // app.get('/contactlistadd',businessController.renderAddContact)
+    // app.post('/add',businessController.processAddContact);
+    // app.get('/contactlistedit/:id',businessController.renderEditPage)
+    // app.post('/contactlistedit/:id',businessController.processEditPage)
+    // app.get('/contactlistdelete/:id',businessController.performDelete)
 }
 
 
