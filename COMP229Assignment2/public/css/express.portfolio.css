@@ -98,18 +98,41 @@ table{
     font-size: 20px;
 }
 
-.project p,.service p,.resume,.contact a,.contact p{
+.project p,.service p,.resume,.contact a,.contact p,.formButton a{
     color: #f2f2f2;
     text-align: center;
    
 
 }
-.project p span,.service p,.resume span,.contact span,.contact p span,.message span{
+
+.formButton button {
+  
     padding: 5px;
     padding-right: 15px;
     padding-left: 15px;
     border-radius:15px;
     background-color: rgba(16, 141, 183, 0.818);
+    border: none;
+
+    color: white;
+  
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+ 
+  }
+  
+
+
+
+
+.project p span,.service p,.resume span,.contact span,.contact p span,.message span,.formButton a span{
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius:15px;
+    background-color: rgba(16, 141, 183, 0.818);
+    
 }
 
 /*About Me Page Body css*/
@@ -157,6 +180,7 @@ table{
     background-color: rgba(12, 143, 43, 0.237);
 }
 
+
 .message
 {
     padding:10px;
@@ -165,6 +189,50 @@ table{
     text-align: center;
     background-color: rgba(143, 95, 12, 0.237);
 }
+
+
+.contactform label , .addForm label{
+    width: 10%;
+    display: inline-block;
+    text-align: right;
+    margin: 0 5% 0 0;
+    white-space: nowrap;
+}
+
+.contactform , .addForm,.logincontainer
+{
+    padding:30px;
+    color: #000000;
+    border-radius:15px;
+    text-align: center;
+    background-color: rgba(255, 187, 70, 0.277);
+    white-space: nowrap;
+}
+
+/*contactlist table css*/
+
+.contactListTable td,.contactListTable  {
+    border: 1px solid;
+  }
+  
+.contactListTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(143, 95, 12, 0.237);
+    padding:30px;
+    border-radius:15px;
+  }
+
+.contactListTable td {
+    height: 70px;   
+
+}
+.contactListTable th {
+    height: 50px;   
+
+}
+
+
 
 /*footer css*/
 .footer{

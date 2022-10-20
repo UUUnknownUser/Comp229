@@ -1,11 +1,11 @@
+<!-- _business_add_fields.ejs Kwun Hing Lau 301230390  10/19/2022-->
 
 <!-- Content for the Add page -->
-<div class="container">
-    <div class="row">
-        <div class="offset-md-3 col-md-6">
+<div class="addForm">
+    
             <h1><%= title %></h1>
 
-            <form class="addForm" method="post">
+            <form  method="post">
                 <div class="form-group">
                     <label for="contactNameTextField">Contact Name</label>
                     <input type="text" class="form-control"
@@ -13,7 +13,7 @@
                     placeholder="Enter the Contact Name"
                     name="contactName" required>
                 </div>
-
+                <br>
                 <div class="form-group">
                     <label for="contactNumberTextField">Contact Number</label>
                     <input type="text" class="form-control"
@@ -21,7 +21,7 @@
                     placeholder="Enter the Contact Number"
                     name="contactNumber" required>
                 </div>
-
+                <br>
                 <div class="form-group">
                     <label for="emailTextField">Email</label>
                     <input type="email" class="form-control"
@@ -29,17 +29,16 @@
                     placeholder="Enter the Email"
                     name="email" required>
                 </div>
+                <br>
 
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit</button>
-                
-                    <a href="/ContactList" class="btn btn-warning">
-                        <i class="fas fa-undo"></i> Cancel</a>
+                <div class="formButton" >
+                <button class="btn btn-primary" type="submit">Submit</button>
+                &nbsp&nbsp&nbsp&nbsp
+                <a href="/ContactList" class="btn btn-warning"><span>Cancel</span> </a>
+                </div>
 
             </form>
-        </div>
-
-    </div>
 </div>
+
 
 

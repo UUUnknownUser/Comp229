@@ -1,11 +1,14 @@
-<div class="container">
-    <div class="row">
-        <div class="offset-md-3 col-md-6">
+<!--_business_edit_fields.ejs Kwun Hing Lau 301230390  10/19/2022-->
+
+
+<div class="contactform">
+   
+      
             <h1><%= title %></h1>
 
 
            
-            <form class="form" method="POST">
+            <form method="POST">
                 <div class="form-group">
                     <label for="contactNameTextField">Contact Name</label>
                     <input type="text" class="form-control"
@@ -15,7 +18,7 @@
                     value="<%= contactlist.contactName %>"
                     required>
                 </div>
-                
+                <br>
               
                 <div class="form-group">
                     <label for="contactNumberTextField">Contact Number</label>
@@ -26,7 +29,7 @@
                     value="<%= contactlist.contactNumber %>"
                     required>
                 </div>  
-
+                <br>
                 <div class="form-group">
                     <label for="emailTextField">Email</label>
                     <input type="email" class="form-control"
@@ -38,18 +41,19 @@
                 </div>
                 
 
-               
-
+                <br>
+                <div class="formButton" >
                 <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit</button>
+                    <span>Submit</span></button>
+                    &nbsp&nbsp&nbsp&nbsp
                     <a href="/contactlistdelete/<%=contactlist._id %>" class="btn btn-danger btn-sm">
-                        <i class="fas fa-trash-alt"></i> Delete</a>
-                
+                    <span>Delete</span></a>
+                    &nbsp&nbsp&nbsp&nbsp
                     <a href="/contactlist" class="btn btn-warning">
-                        <i class="fas fa-undo"></i> Cancel</a>
-
+                    <span>Cancel</span></a>
+                </div>
             </form>
-        </div>
+       
 
-    </div>
+    
 </div>

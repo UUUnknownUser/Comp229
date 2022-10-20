@@ -1,3 +1,5 @@
+// users.server.model.js Kwun Hing Lau 301230390  10/19/2022
+
 //require modules for the User Model
 
 let mongoose                    = require('mongoose')

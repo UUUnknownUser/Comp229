@@ -1,4 +1,4 @@
-// index.server.controller.js Kwun Hing Lau 301230390  10/4/2022
+// index.server.controller.js Kwun Hing Lau 301230390  10/19/2022
 
 
 //used to render a view and give properties define local variables for the view

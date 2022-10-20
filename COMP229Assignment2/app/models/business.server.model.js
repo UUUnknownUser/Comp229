@@ -1,3 +1,5 @@
+// business.server.model.js Kwun Hing Lau 301230390  10/19/2022
+
 //require modules for the Business Model
 
 let mongoose                    = require('mongoose')

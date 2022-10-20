@@ -1,3 +1,5 @@
+<!--ContactList.ejs Kwun Hing Lau 301230390  10/19/2022-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,15 +16,15 @@
 
    
     <%- include('../../partials/content'); %>
-       
+            <div class="formButton" >
             <a href="/contactlistadd" class="btn btn-primary" role="button">
-                <i class="fas fa-plus-circle"></i> Add Nre Contact</a>
-
-            <p>---------------------------------------------------------------------</p>
-            
+                <span> Add New Contact</span></a>
+            </div>
+        
+            <br><br>
             <!-- Repeatable Template Row -->
-            <div class="offset-md-1 col-md-11"></div>
-            <table class="table table-bordered table-striped table-hover">
+           
+            <table class="contactListTable">
                 <!-- Header Row-->
                 <tr class="d-flex">
                    
@@ -39,19 +41,25 @@
                     
                         <td class="text-center col-2"><%= contactList[count].contactName %></td>
                         <td class="text-center col-2"><%= contactList[count].contactNumber %></td>
-                        <td class="text-center col-1"><%= contactList[count].email %></td>          
-                        <td class="text-center col-1">
-                            <a href="/contactlistedit/<%= contactList[count]._id %>" class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i> Edit</a>
-                        </td>
-                        <td class="text-center col-1">
-                            <a href="/contactlistdelete/<%= contactList[count]._id %>" class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i> Delete</a>
-                        </td>
+                        <td class="text-center col-1"><%= contactList[count].email %></td>    
+                             
+                            <td class="text-center col-1">
+                                <div class="formButton" >
+                                <a href="/contactlistedit/<%= contactList[count]._id %>" class="btn btn-primary btn-sm">
+                                <span> Edit</span></a>
+                                </div> 
+                            </td>
+                            <td class="text-center col-1">
+                                <div class="formButton" >
+                                <a href="/contactlistdelete/<%= contactList[count]._id %>" class="btn btn-danger btn-sm">
+                                <span>Delete</span></a>
+                                </div> 
+                            </td>
+                         
                 </tr>
             <% } %>
         </table>
-    </div>
+  
             
 
             
