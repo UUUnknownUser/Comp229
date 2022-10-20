@@ -5,6 +5,9 @@ const mongoose  = require('../../config/mongoose')
 let Contactlist = require('../models/business.server.model');
 const { UserSchema } = require('../models/users.server.model');
 
+
+
+
 //render Contactlist Page
 module.exports.rendercontactlist = (req, res, next) => {
     // if(!req.user){
@@ -81,7 +84,8 @@ module.exports.renderEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('businessContact/ContactUpdate', {title: 'Edit Contact', contactlist: contantToEdit, 
+            res.render('businessContact/ContactUpdate', {title: 'Edit Contact',
+             contactlist: contantToEdit, 
             displayName: req.user ? req.user.displayName : ''})
         }
     });
@@ -107,6 +111,25 @@ module.exports.processEditPage = (req, res, next) => {
         {
             // refresh the contact list
             res.redirect('/contactlist');
+        }
+    });
+}
+
+
+ //Process Contactlist Delete
+module.exports.performDelete = (req, res, next) => {
+    let id = req.params.id;
+
+    Contactlist.remove({_id: id}, (err) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+             // refresh the book list
+             res.redirect('/contactlist');
         }
     });
 }

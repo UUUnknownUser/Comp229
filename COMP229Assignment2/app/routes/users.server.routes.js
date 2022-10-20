@@ -12,5 +12,5 @@ module.exports = function(app) {
 
     app.get('/logout', userController.performLogout);
 
-   
+    app.post('/', userController.loginUser)
 }
