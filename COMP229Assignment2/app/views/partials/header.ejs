@@ -11,18 +11,18 @@
    
 <div class="navigationBar">
     <img src="/img/Personal_logo.png" alt="Logo"width="50px">
-    <a href="/Home">Home Page</a>
-    <a href="/AboutMe">About Me</a>
-    <a href="/Project">Project Page</a>
-    <a href="/Service">Services Page</a>
-    <a href="/Contact">Contact</a>
-    <a href="/ContactList">Contact List</a>
+    <a href="/home">Home Page</a>
+    <a href="/aboutMe">About Me</a>
+    <a href="/project">Project Page</a>
+    <a href="/service">Services Page</a>
+    <a href="/contact">Contact</a>
+    <a href="/contactList">Contact List</a>
     
     <% if(typeof displayName == 'string' && displayName) { %>
        <a>Welcome, <%= displayName %></a>
-       <a href="/Logout" >Logout</a>
+       <a href="/logout" >Logout</a>
       <% } else { %>
-        <a href="/Login">Login</a>
+        <a href="/login">Login</a>
       <% } %>
 
 
